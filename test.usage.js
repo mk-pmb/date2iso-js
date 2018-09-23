@@ -15,6 +15,7 @@ function detectTimeZone() {
   var date2iso = require('date2iso'), tzo = detectTimeZone();
 
   equal(date2iso(0), '1970-01-01T00:00:00.000Z');
+  equal(date2iso().slice(0, 5), (new Date()).getFullYear() + '-');
 
   equal(date2iso(2018, 8, 23, 12 + tzo.hr, 34 + tzo.min, 56, 789),
                 '2018-09-23T12:34:56.789Z');
