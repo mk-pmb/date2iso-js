@@ -1,0 +1,27 @@
+{ "name": "date2iso",
+  "version": "1.0.0",
+  "description": "return (new Date(...args)).toISOString()",
+  "keywords": [],
+
+  "author": "M.K. (https://github.com/mk-pmb)",
+  "homepage": "https://github.com/mk-pmb/date2iso-js/#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mk-pmb/date2iso-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mk-pmb/date2iso-js/issues"
+  },
+  "contributors": [],
+
+  "private": false, "license": "ISC",
+
+  "main": "date2iso.js",
+  "scripts": { "test": "nodejs test.usage.js" },
+
+  "dependencies": {},
+  "devDependencies": {},
+
+
+  "npm vs. BOM = Unexpected token": "-*- coding: UTF-8 -*-"
+}
