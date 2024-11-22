@@ -5,7 +5,8 @@ date2iso
 <!--/#echo -->
 
 <!--#echo json="package.json" key="description" -->
-return (new Date(...args)).toISOString()
+return (new Date(...args)).toISOString() but with helpful error message on
+invalid dates.
 <!--/#echo -->
 
 
@@ -17,7 +18,7 @@ from [test.usage.js](test.usage.js):
 
 <!--#include file="test.usage.js" outdent="  " code="javascript"
   start="  // #BEGIN# usage demo" stop="  // #ENDOF# usage demo" -->
-<!--#verbatim lncnt="13" -->
+<!--#verbatim lncnt="16" -->
 ```javascript
 var date2iso = require('date2iso'), tzo;
 
@@ -30,6 +31,9 @@ equal(date2iso(2018, 8, 23, 12 + tzo, 34, 56, 789),
 
 equal(date2iso('2018-09-23 12:34:56 UTC+0200'),
                '2018-09-23T10:34:56.000Z');
+
+assert.throws(function fail() { date2iso('0000-00-00 25:60:60 UTC+3200'); },
+  /25:60:60/); // date2iso actually reveals what the invalid input was.
 ```
 <!--/include-->
 

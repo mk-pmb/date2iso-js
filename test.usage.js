@@ -24,6 +24,9 @@ function getTimeZoneOffsetHourForDayAtNoon(y, m, d) {
 
   equal(date2iso('2018-09-23 12:34:56 UTC+0200'),
                  '2018-09-23T10:34:56.000Z');
+
+  assert.throws(function fail() { date2iso('0000-00-00 25:60:60 UTC+3200'); },
+    /25:60:60/); // date2iso actually reveals what the invalid input was.
   // #ENDOF# usage demo
 }());
 

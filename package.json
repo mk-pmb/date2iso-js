@@ -1,6 +1,6 @@
 { "name": "date2iso",
-  "version": "1.0.1",
-  "description": "return (new Date(...args)).toISOString()",
+  "version": "1.0.2",
+  "description": "return (new Date(...args)).toISOString() but with helpful error message on invalid dates.",
   "keywords": [],
 
   "author": "M.K. (https://github.com/mk-pmb)",
@@ -19,9 +19,14 @@
   "main": "date2iso.js",
   "scripts": { "test": "nodejs test.usage.js" },
 
+  "directories": { "test": "test" },
+
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "usnam-pmb": "^0.2.5"
+  },
 
 
-  "npm vs. BOM = Unexpected token": "-*- coding: UTF-8 -*-"
+
+  "engines": { "npm": ">=7.0.0", "node": ">=8.0.0" }
 }
